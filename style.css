@@ -39,5 +39,10 @@ margin-bottom: 10px;
 }
 #addTaskbtn{
 width: 100%;
+padding: 12px;
+background-color: rgb(127, 126, 127);
+border-radius: 6px;
+font-size: 16px;
+cursor: pointer;
 
 } 
