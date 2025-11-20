@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do</title>
+    <title>TO DO</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
 </head>
+
 <body>
-  <form id="toDo">
-    <h2 id="heading">To-Do List Manager <img src="" alt=""></h2>
-<input type="text" id="inputBox" placeholder="What's the task?">
-<button type="submit" id="addTaskbtn">ADD</button>
+    <div class="container">
+        <h1 style="text-align: center;margin-bottom: 2rem;">TO DO LIST</h1>
+        <form action="" id="form">
+            <div class="" style="width: 100%;display: flex;gap: 1rem;">
+                <input type="text" id="input" placeholder="Add an item"
+                    style="width: 100%;border-radius: 5px;padding: .7rem;">
+                <button class="submitBtn" id="submitBtn">Submit</button>
+            </div>
+        </form>
+        <div id="wrapper" class="wrapper">
+            <ul id="ul">
 
-<ul id="tasks">
-    <li>Task1</li>
-     <li>Task2</li>
-      <li>Task3</li>
-       <li>Task4</li>
-       <li>Task5</li>
+                <!-- <div class="taskItem">
+                        <li>Go to church</li>
+                        <div class="">
+                            <button>Edit</button>
+                            <button class="deleteBtn">Delete</button>
+                        </div>
+                    </div>
+                    <div class="taskItem">
+                        <li>Go to church</li>
+                        <div class="">
+                            <button>Edit</button>
+                            <button class="deleteBtn">Delete</button>
+                        </div>
+                    </div> -->
 
-</ul>
-
-<div class="taskCount">
-<p>Total: <span id="Total">0</span></p>
-<p>Completed: <span id="Completed">0</span></p>
-
-</div>
-
-
-  </form> 
-    <script src="script.js"></script>
+            </ul>
+            <button id="clearBtn" class="clearBtn">Clear All</button>
+        </div>
+    </div>
 </body>
+
 </html>
