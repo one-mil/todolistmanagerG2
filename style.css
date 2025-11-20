@@ -1,48 +1,121 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-image: url(bckgrndTD.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
+body {
     display: flex;
-    justify-content: center;
     align-items: center;
-    
+    justify-content: center;
+    margin: auto 3rem;
+    min-height: 90vh;
 }
 
-#toDo{
-   background-color: rgb(243, 247, 247);
-   padding: 20px;
-   border-radius: 10px;
-   width: 300px;
-   
+.wrapper {
+    margin-top: 1rem;
+    visibility: hidden;
 }
 
-/* button{
-    border-radius: 6px;
-cursor: pointer;
-} */
+.show {
+    visibility: visible;
+}
 
-#inputBox{
-width: 100%;
-padding: 12px;
-border: 1px solid #ccc;
-box-sizing: border-box;
-border-radius: 10px;
-font-size: 16px;
-margin-bottom: 10px;
-/* outline: none; */
-/* transition: 0.2s ease */
+ul {
+    margin-block: 2rem;
+    /* border: 2px solid red; */
 
 }
-#addTaskbtn{
-width: 100%;
-padding: 12px;
-background-color: rgb(127, 126, 127);
-border-radius: 6px;
-font-size: 16px;
-cursor: pointer;
 
-} 
+input {
+    outline: none;
+    background-color: rgb(243, 243, 250);
+    padding-inline: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border: none;
+    font-size: 1.2rem;
+}
+
+input::placeholder {
+    color: #999;
+    font-size: 1.2em;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+input:focus-within {
+    background-color: white;
+}
+
+button {
+    padding-inline: 15px;
+    padding-block: 8px;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 1rem;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    transition: all .3s;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    &:hover {
+        background-color: rgb(216, 216, 218);
+        box-shadow: rgba(0, 0, 0, 0.35) 1.95px 1.95px 3.6px;
+
+    }
+}
+
+
+.container {
+    background-color: rgb(233, 233, 250);
+    border-radius: .4rem;
+    padding: 2rem;
+    min-width: 600px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.taskItem {
+    border-bottom: 1px solid rgb(204, 202, 202);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'Courier New';
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    transition: all .3s;
+
+    &:hover {
+        background-color: rgb(225, 225, 250);
+
+    }
+}
+
+.clearBtn {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    padding-inline: 25px;
+    padding-block: 15px;
+    /* visibility: hidden; */
+
+}
+
+
+
+.deleteBtn {
+    background-color: rgb(240, 82, 82);
+    margin-left: .4rem;
+
+    &:hover {
+        background-color: rgb(238, 128, 128);
+
+    }
+}
+
+.editBtn {
+    margin-left: .4rem;
+
+    &:hover {
+        background-color: rgb(216, 216, 218);
+    }
+}
+
+.hide {
+    visibility: hidden;
+}
