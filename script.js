@@ -7,25 +7,6 @@ let wrapper = document.getElementById('wrapper')
 // const toDoList = ['sister', 'mother', 'son']
 const toDoList = []
 
-const anyItems = () => {
-    if (toDoList.length > 0) {
-        clearBtn.classList.add('show')
-    }
-}
-// anyItems()
-input.focus()
-
-
-console.log(toDoList)
-
-
-clearBtn.addEventListener('click', () => {
-    // toDoList.splice(0)
-    wrapper.innerHTML = ''
-    wrapper.classList.remove('show')
-
-    console.log('clear clicked')
-})
 
 
 const createItems = (e) => {
@@ -65,6 +46,7 @@ const createItems = (e) => {
 
     })
     const actions = document.createElement('div')
+    actions.classList.add('actions')
     actions.appendChild(completedBtn)
     actions.appendChild(deleteBtn)
 
@@ -86,6 +68,7 @@ clearBtn.addEventListener('click', () => {
 
     
 })
+
 
 
 
