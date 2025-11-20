@@ -38,7 +38,7 @@ const createItems = (e) => {
     completedBtn.addEventListener('click', () => {
         if (completedBtn.checked) {
             itemDescription.style.textDecoration = 'line-through'
-            itemDescription.style.textDecorationThickness = '10px'
+            itemDescription.style.textDecorationThickness = '5x'
 
         } else {
             itemDescription.style.textDecoration = ''
