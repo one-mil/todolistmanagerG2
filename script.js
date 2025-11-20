@@ -38,14 +38,32 @@ const createItems = (e) => {
     const itemDescription = document.createElement('li')
     itemDescription.textContent = `${input.value}`
 
+
     const deleteBtn = document.createElement('button')
     deleteBtn.textContent = 'Delete'
     deleteBtn.classList.add('button', 'deleteBtn')
+    deleteBtn.addEventListener('click', (e) => {
+        e.target.parentElement.parentElement.remove()
 
-    const completedBtn = document.createElement('button')
-    completedBtn.textContent = 'Edit'
-    completedBtn.classList.add('button')
+        if (ul.children.length == 0) {
+            wrapper.classList.remove('show')
 
+        }
+    })
+    const completedBtn = document.createElement('input')
+    completedBtn.type = 'checkbox'
+    completedBtn.classList.add('checked')
+    
+    completedBtn.addEventListener('click', () => {
+        if (completedBtn.checked) {
+            itemDescription.style.textDecoration = 'line-through'
+            itemDescription.style.textDecorationThickness = '10px'
+
+        } else {
+            itemDescription.style.textDecoration = ''
+        }
+
+    })
     const actions = document.createElement('div')
     actions.appendChild(completedBtn)
     actions.appendChild(deleteBtn)
@@ -62,6 +80,12 @@ const createItems = (e) => {
 }
 
 form.addEventListener('submit', createItems)
+clearBtn.addEventListener('click', () => {
+    ul.innerHTML = ''
+    wrapper.classList.remove('show')
+
+    
+})
 
 
 
